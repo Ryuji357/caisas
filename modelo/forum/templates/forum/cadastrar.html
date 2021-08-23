@@ -1,0 +1,23 @@
+{% extends 'forum/base.html' %}
+
+{% block titulo %}
+Login
+{% endblock titulo %}
+
+{% block conteudo %}
+<form action="." method="POST">
+	{% csrf_token %}
+	<table>
+		<tr>
+			<td>Nome:</td>
+			<td><input type="text" name="usu"></td></tr>
+		<tr>
+			<td>Senha:</td>
+			<td><input type="password" name="sen"></td></tr>
+		<tr>
+			<td><input type="submit" value="Entrar"></td>
+			<td><input type="button" value="Cadastrar" href="{% url 'cadastrar' %}"></td>
+		</tr>
+	</table>
+</form>
+{% endblock conteudo %}

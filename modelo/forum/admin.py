@@ -5,3 +5,5 @@ from .models import *
 # Register your models here.
 
 admin.site.register(tag)
+admin.site.register(usuario)
+admin.site.register(thread)
